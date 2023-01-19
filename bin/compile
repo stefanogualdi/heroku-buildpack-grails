@@ -123,10 +123,10 @@ echo "done"
 
 cd $CACHE_DIR
 
-if [ -f $BUILD_DIR/grailsw ] ; then
-    chmod +x $BUILD_DIR/grailsw
-    GRAILS_CMD="./grailsw"
-else
+#if [ -f $BUILD_DIR/grailsw ] ; then
+#    chmod +x $BUILD_DIR/grailsw
+#    GRAILS_CMD="./grailsw"
+#else
   # install grails
   if [ ! -d $GRAILS_DIR ]; then
     install_grails $GRAILS_VERSION
@@ -138,7 +138,7 @@ else
       install_grails $GRAILS_VERSION
     fi
   fi
-fi
+#fi
 
 # JAVA_HOME is exported in install_java
 export GRAILS_HOME=$CACHE_DIR/$GRAILS_DIR
