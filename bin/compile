@@ -58,7 +58,10 @@ install_grails()
 {
   VER_TO_INSTALL=$1
   GRAILS_URL="https://github.com/grails/grails-core/releases/download/v${VER_TO_INSTALL}/grails-${VER_TO_INSTALL}.zip"
-  GRAILS_ALT_URL="http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-$VER_TO_INSTALL.zip"
+  # GRAILS_ALT_URL="http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-$VER_TO_INSTALL.zip"
+  GRAILS_ALT_URL="https://github.com/grails/grails-core/releases/download/v${VER_TO_INSTALL}/grails-${VER_TO_INSTALL}.zip"
+
+  echo "-----> FORCE DOWNLOAD SITE!"
 
   validate_grails_version $VER_TO_INSTALL
 
